@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  overflow: scroll;
+  position: absolute;
+  left: 30%;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq {
+  background-color: rgb(214, 214, 214);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 500px;
+  /* position: absolute; */
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  color: rgb(39, 188, 39);
+  font-size: 6em;
+  position: absolute;
+  opacity: 0.2;
+  top: 90px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: blue;
+  top: -10;
+  left: -30;
+  transform: rotateY("180deg");
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0px 0px;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.btn-togle {
+  border: 0;
+  background-color: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 0;
+  position: relative;
+  /* top: 10px; */
+  left: 450px;
+  bottom: 15px;
+  border-radius: 50%;
+}
+.btn-togle:focus {
+  outline: none;
+}
+
+.btn-togle .fa-times {
+  display: none;
+}
+
+.faq-active .btn-togle .fa-times {
+  display: block;
+}
+
+.faq-active .btn-togle .fa-chevron-dowm {
+  display: none;
+}
+
+.faq-active .btn-togle {
+  background-color: #9fa4a8;
+}
